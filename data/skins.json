@@ -1,0 +1,75 @@
+{
+  "skins": [
+    {
+      "id": 1,
+      "name": "Mountain Explorer",
+      "rarity": "common",
+      "description": "A traveler who finds peace in stillness.",
+      "imagePath": "",
+      "rarityColor": "#A8A8A8"
+    },
+    {
+      "id": 2,
+      "name": "Forest Wanderer",
+      "rarity": "common",
+      "description": "One with nature, calm and centered.",
+      "imagePath": "",
+      "rarityColor": "#A8A8A8"
+    },
+    {
+      "id": 3,
+      "name": "Lunar Ranger",
+      "rarity": "rare",
+      "description": "Guided by moonlight, masters of midnight focus.",
+      "imagePath": "",
+      "rarityColor": "#4A90E2"
+    },
+    {
+      "id": 4,
+      "name": "Starlight Seeker",
+      "rarity": "rare",
+      "description": "Follows constellations to find inner balance.",
+      "imagePath": "",
+      "rarityColor": "#4A90E2"
+    },
+    {
+      "id": 5,
+      "name": "Twilight Sage",
+      "rarity": "epic",
+      "description": "Ancient wisdom flows through their stillness.",
+      "imagePath": "",
+      "rarityColor": "#9B59B6"
+    },
+    {
+      "id": 6,
+      "name": "Aurora Guardian",
+      "rarity": "epic",
+      "description": "Protected by the northern lights' focus.",
+      "imagePath": "",
+      "rarityColor": "#9B59B6"
+    },
+    {
+      "id": 7,
+      "name": "Celestial Wanderer",
+      "rarity": "legendary",
+      "description": "Cosmic beings who bend time through pure concentration.",
+      "imagePath": "",
+      "rarityColor": "#FFD700"
+    },
+    {
+      "id": 8,
+      "name": "Eternal Monk",
+      "rarity": "legendary",
+      "description": "Achieved perfect stillness across lifetimes.",
+      "imagePath": "",
+      "rarityColor": "#FFD700"
+    }
+  ],
+  "rarityRates": {
+    "common": 0.60,
+    "rare": 0.30,
+    "epic": 0.09,
+    "legendary": 0.01
+  },
+  "gachaCost": 10
+}

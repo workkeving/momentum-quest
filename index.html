@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Momentum Quest - Focus Game</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Main Game Container -->
+  <div class="game-container">
+
+    <!-- Header -->
+    <header class="header">
+      <h1 class="game-title">🌙 Momentum Quest</h1>
+      <div class="token-display">
+        <span class="token-icon">🌙</span>
+        <span id="token-count" class="token-count">0</span>
+      </div>
+    </header>
+
+    <!-- Main Game Area -->
+    <main class="game-area">
+
+      <!-- Timer Display -->
+      <div class="timer-container">
+        <div class="timer-label">Time Remaining</div>
+        <div id="timer-display" class="timer-display">00:20</div>
+      </div>
+
+      <!-- Character Area (Placeholder for future character sprites) -->
+      <div class="character-area">
+        <div class="character-placeholder">
+          <div class="character-icon">🧘</div>
+        </div>
+      </div>
+
+      <!-- Stamina Bar -->
+      <div class="stamina-container">
+        <div class="stamina-label">Stamina</div>
+        <div id="stamina-bar" class="stamina-bar">
+          <div id="stamina-fill" class="stamina-fill"></div>
+        </div>
+        <div id="stamina-text" class="stamina-text">100 / 100</div>
+      </div>
+
+      <!-- State Display -->
+      <div class="state-container">
+        <div id="state-display" class="state-display">Ready to Begin</div>
+        <div id="state-message" class="state-message">Press Start to begin your focus quest<br><small style="opacity: 0.7;">(iOS will ask for motion permission)</small></div>
+      </div>
+
+      <!-- iOS Permission Screen (shown only on iOS when needed) -->
+      <div id="permission-screen" class="permission-screen" style="display: none;">
+        <div class="permission-content">
+          <div class="permission-icon">📱</div>
+          <h2>Motion Permission Required</h2>
+          <p>Momentum Quest uses your device's motion sensors to detect when you move your phone.</p>
+          <p class="permission-note"><strong>iOS Users:</strong> If permission is denied, go to iPhone Settings → Safari → Motion & Orientation Access and enable it.</p>
+          <button id="grant-permission-button" class="btn btn-primary btn-large">Grant Motion Access</button>
+          <button id="skip-permission-button" class="btn btn-secondary">Skip (for testing)</button>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="button-container">
+        <button id="start-button" class="btn btn-primary">Start Focus Session</button>
+        <button id="reset-button" class="btn btn-secondary" style="display: none;">Continue</button>
+      </div>
+
+    </main>
+
+    <!-- Debug Info (Optional) -->
+    <div id="debug-info" class="debug-info">
+      <div class="debug-title">Debug Info</div>
+      <div class="debug-row">
+        <span>Movement:</span>
+        <span id="movement-value" class="movement-value">0.00</span>
+      </div>
+      <div class="debug-row">
+        <span>Threshold:</span>
+        <span>1.2</span>
+      </div>
+    </div>
+
+    <!-- Error Message -->
+    <div id="error-message" class="error-message" style="display: none;"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Keep your phone still to maintain focus</p>
+      <p class="small">v1.0 Prototype</p>
+    </footer>
+
+  </div>
+
+  <!-- JavaScript Modules (Load in order of dependencies) -->
+  <script src="js/config.js"></script>
+  <script src="js/gameState.js"></script>
+  <script src="js/accelerometer.js"></script>
+  <script src="js/timer.js"></script>
+  <script src="js/stamina.js"></script>
+  <script src="js/rewards.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
