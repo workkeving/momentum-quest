@@ -89,11 +89,28 @@ const Game = {
       this.onMovementDetected();
     });
 
-    // Update movement debug every 100ms when listening
+    // Update movement debug and check movement status every 100ms
     setInterval(() => {
       if (Accelerometer.isListening) {
         const magnitude = Accelerometer.getLastMagnitude();
         UI.updateMovementDebug(magnitude);
+
+        // Check if we should stop draining stamina
+        if (GameState.isInState(GAME_STATES.STAMINA_DRAINING)) {
+          if (!Accelerometer.isMoving()) {
+            // Movement stopped - stop draining and return to focus
+            Stamina.stopDraining();
+            GameState.setState(GAME_STATES.FOCUS_ACTIVE);
+            console.log('Movement stopped - stamina drain stopped');
+          }
+        }
+
+        // Check if movement started during focus
+        if (GameState.isInState(GAME_STATES.FOCUS_ACTIVE)) {
+          if (Accelerometer.isMoving()) {
+            this.onMovementDetected();
+          }
+        }
       }
     }, 100);
   },
