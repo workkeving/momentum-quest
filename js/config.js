@@ -11,9 +11,10 @@ const CONFIG = {
   TIMER_UPDATE_INTERVAL: 1000,  // How often to update timer display (milliseconds)
 
   // Movement Detection Settings
-  MOVEMENT_THRESHOLD: 1.2,      // Acceleration magnitude threshold for movement detection
+  MOVEMENT_THRESHOLD: 12.0,     // Acceleration magnitude threshold for movement detection
                                  // Lower = more sensitive, Higher = more lenient
-                                 // Recommended: 1.0-2.0 (1.2 is a good starting point)
+                                 // Calibrated for desk environment (baseline ~9.72)
+                                 // Tolerates vibrations, catches intentional movement
 
   // Stamina Settings
   STAMINA_MAX: 100,              // Maximum stamina value
