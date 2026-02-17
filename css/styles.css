@@ -34,7 +34,7 @@
 
 body {
   font-family: var(--font-primary);
-  background: linear-gradient(180deg, var(--color-bg-dark) 0%, var(--color-bg-medium) 100%);
+  background: #e4dbca;
   color: var(--color-primary);
   min-height: 100vh;
   display: flex;
@@ -127,20 +127,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 200px;
+  min-height: 300px;
   margin: 20px 0;
 }
 
 .character-placeholder {
-  width: 120px;
-  height: 120px;
+  max-width: 280px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(155, 89, 182, 0.2);
-  border-radius: 50%;
-  border: 3px solid var(--color-accent-purple);
-  box-shadow: 0 0 30px rgba(155, 89, 182, 0.4);
+}
+
+.character-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.2));
+  animation: breathe 3s ease-in-out infinite;
 }
 
 .character-icon {
