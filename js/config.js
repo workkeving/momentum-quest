@@ -18,7 +18,7 @@ const CONFIG = {
 
   // Stamina Settings
   STAMINA_MAX: 100,              // Maximum stamina value
-  STAMINA_DRAIN_RATE: 1,         // Stamina drained per second when moving (1 damage/sec)
+  STAMINA_DRAIN_RATE: 10,        // Stamina drained per second when moving (10 damage/sec)
   STAMINA_RECOVERY_RATE: 0,      // Stamina recovered per second when still (0 = no recovery)
 
   // Reward Settings

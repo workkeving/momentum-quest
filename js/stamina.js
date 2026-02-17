@@ -38,7 +38,10 @@ const Stamina = {
     this.isDraining = true;
     console.log('Stamina: Started draining');
 
-    // Drain stamina every second
+    // Drain immediately on first movement
+    this.drainStamina(CONFIG.STAMINA_DRAIN_RATE);
+
+    // Then continue draining every second while moving
     this.drainIntervalId = setInterval(() => {
       this.drainStamina(CONFIG.STAMINA_DRAIN_RATE);
     }, 1000);
